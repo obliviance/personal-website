@@ -1,0 +1,48 @@
+---
+type Props = MarkdownLayoutProps<{
+    title: string;
+    pubDate: string;
+    description: string;
+    author: string;
+    image: 
+        {
+            src: string;
+            alt: string;
+        };
+    category: string;
+    tags: string[];
+}>;
+
+import { type MarkdownLayoutProps } from 'astro';
+
+const { frontmatter, rawContent } = Astro.props;
+
+// Function to estimate reading time (words per minute)
+function calculateReadingTime(text: string, wpm = 200) {
+    if (text) return { wordCount: 0, minutes: 0 };
+    const words = text.split(/\s+/).filter(word => word.length > 0);
+    const wordCount = words.length;
+    const minutes = Math.ceil(wordCount / wpm);
+    return { wordCount, minutes };
+}
+
+const { wordCount, minutes } = calculateReadingTime(rawContent());
+
+import BaseLayout from './BaseLayout.astro';
+const pageTitle = frontmatter.title;
+
+import '../styles/global.css';
+---
+<BaseLayout pageTitle={pageTitle}>
+<meta charset="utf-8" />
+<h1>{frontmatter.title}</h1>
+<p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+<p><em>{frontmatter.description}</em></p>
+<p>Written by: {frontmatter.author}</p>
+<ul>
+    <li>Tags: {frontmatter.tags.join(', ')}</li>
+    <li>Reading time: {minutes} minutes</li>
+    <li>Category: {frontmatter.category}</li>
+</ul>
+<slot />
+</BaseLayout>

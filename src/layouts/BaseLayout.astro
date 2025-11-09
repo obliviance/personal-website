@@ -1,0 +1,49 @@
+---
+import "../styles/global.css";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const { pageTitle } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<Header />
+
+		<div class="content-container">
+			<slot />
+		</div>
+
+		<button id="to-top"></button>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+  #to-top {
+  float: right;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 200%;
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  transition: 0.5s;
+  outline: none;
+}
+
+#to-top:hover {
+  background-color: aquamarine;
+}
+</style>

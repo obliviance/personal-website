@@ -1,0 +1,64 @@
+---
+import Header from "../components/Header.astro";
+import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
+import Skills from "../components/Skills.astro";
+import Publications from "../components/Publications.astro";
+import Footer from "../components/Footer.astro";
+
+const resumeData = await fetch('/awwab-mahdi-resume.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      return data;
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+      return {};
+    });
+
+const { sections = {} } = resumeData;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Awwab Mahdi - Resume</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                line-height: 1.6;
+                margin: 2rem;
+                background: #f9f9f9;
+            }
+            section {
+                margin-bottom: 2rem;
+                background: #fff;
+                padding: 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            section:hover {
+                transform: translateY(-5px);
+            }
+        </style>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <Experience experience={sections.experience} />
+            <Education education={sections.education} />
+            <Skills skills={sections.skills} />
+            <Publications publications={sections.publications} />
+        </main>
+        <Footer />
+    </body>
+</html>

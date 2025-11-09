@@ -1,0 +1,33 @@
+---
+const { skills } = Astro.props;
+---
+
+<section>
+  <h2>Skills</h2>
+  {skills.items.filter((skill: { visible: boolean; }) => skill.visible).map((skill: { name: string; keywords: string[]; }) => (
+    <div class="skill-category">
+      <h3>{skill.name}</h3>
+      <div class="skills-container">
+        {skill.keywords.map((keyword: string) => (
+          <div class="skill">{keyword}</div>
+        ))}
+      </div>
+    </div>
+  ))}
+</section>
+
+<style>
+  .skill-category {
+    margin-bottom: 1.5rem;
+  }
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .skill {
+    background-color: #f0f0f0;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+</style>

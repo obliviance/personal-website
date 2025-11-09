@@ -1,0 +1,429 @@
+{
+  "basics": {
+    "name": "Awwab Mahdi",
+    "headline": "",
+    "email": "awwab.mahdi@gmail.com",
+    "phone": "6138796715",
+    "location": "Ottawa, ON",
+    "url": {
+      "label": "",
+      "href": ""
+    },
+    "customFields": [],
+    "picture": {
+      "url": "",
+      "size": 64,
+      "aspectRatio": 1,
+      "borderRadius": 0,
+      "effects": {
+        "hidden": false,
+        "border": false,
+        "grayscale": false
+      }
+    }
+  },
+  "sections": {
+    "summary": {
+      "name": "Summary",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": false,
+      "id": "summary",
+      "content": "<p>Currently a growing junior developer with experience designing and building mobile apps and full-stack web applications. Completing my computer science degree with a specialization in Artificial Intelligence and Machine Learning. Looking to use a curious and systematic mindset to develop new applications and ultimately work towards aligning the long-term future of humanity.</p><p><br></p>"
+    },
+    "awards": {
+      "name": "Awards",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": false,
+      "id": "awards",
+      "items": []
+    },
+    "certifications": {
+      "name": "Certifications",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "certifications",
+      "items": []
+    },
+    "education": {
+      "name": "Education",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "education",
+      "items": [
+        {
+          "id": "cpdklhgh0cixwbevzznkaest",
+          "visible": true,
+          "institution": "Carleton University",
+          "studyType": "Cybersecurity Stream",
+          "area": "Bachelors of Computer Science",
+          "score": "",
+          "date": "September 2021 - December 2025",
+          "summary": "<p></p>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "name": "Experience",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "experience",
+      "items": [
+        {
+          "id": "pgjjobkpx7s82zb3ts9682f0",
+          "visible": true,
+          "company": "Department of National Defence Canada",
+          "position": "Data Science Developer",
+          "location": "285 Coventry Rd., Ottawa, ON",
+          "date": "January 2025 - August 2025",
+          "summary": "<p>Term 2</p><ul><li><p>Reworked an existing Protected B government application to replace Azure cloud services with local ones, and produced an exhaustive report on its capabilities</p></li><li><p>Co-authored a research paper on the DocStructNet model, submitted  for publication at ICPRAM 2026</p></li><li><p>Used the AWS fmeval library, along with ECS, EC2, S3 and SageMaker to deploy a government chatbot with an evaluation pipeline</p></li></ul><p>Term 1</p><ul><li><p>Implemented, trained, and tested an optimized 40M parameter document segmentation model(DocStructNet), with 97% accuracy on DocLayNet and PubLayNet datasets</p></li><li><p>Wrote a custom GRPC client to interface with the Seamless translation model, and tested the model to determine BLEU score</p></li><li><p>Tested and debugged a custom transformer based OCR model, and wrote comprehensive documentation for its codebase</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "tut8na2zbfh6ma9km8vn90w5",
+          "visible": false,
+          "company": "Public Service & Procurement Canada",
+          "position": "IM/IT Team Member",
+          "location": "Ottawa",
+          "date": "February 2024 - June 2024",
+          "summary": "<ul><li><p>Maintained the IT requests inbox for the Human Capital Pay Administration Branch with &gt;1000 employees</p></li><li><p>Created a Bash script that was used to a collate and process network data from all 200+ employees in branch</p></li><li><p>Acted as a Local Registration Authority for myKEY creations and recoveries, and met with clients daily to grant access and troubleshoot problems</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "gue3q33ghbnoda39l9ree5ho",
+          "visible": true,
+          "company": "IRM Consulting & Advisory",
+          "position": "AI Developer",
+          "location": "Remote",
+          "date": "December 2023 - January 2024",
+          "summary": "<ul><li><p>Finetuned an open source LLM from the Hugging Face model library that enabled GPU costs to be reduced by 90%</p></li><li><p>Cleaned CIS Controls data from SCF, SOC II, CMMC and other cybersecurity frameworks</p></li><li><p>Used LangChain and HuggingFace embeddings to build a file-based chatbot that was able to effectively interact with clients and respond to queries</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "abjw6czsv7kyyc3y5xrmzhhj",
+          "visible": true,
+          "company": "eWorx Technology",
+          "position": "Mobile App Team Colead",
+          "location": "Remote",
+          "date": "September 2022 - June 2023",
+          "summary": "<ul><li><p>Studied Figma best practices and built several mock-ups to present to the client</p></li><li><p>Translated Figma components into functional React Native components</p></li><li><p>Used a provided REST API to integrate live data into the app</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "ahkwffwlpwuk2fguvfft8eal",
+          "visible": false,
+          "company": "AIModelsTech",
+          "position": "GIS Developer",
+          "location": "Remote",
+          "date": "January 2025 - March 2025",
+          "summary": "<ul><li><p>Developed scripts for loading and processing map data from Google Earth Engine</p></li><li><p>Created a python Flask server for processing and serving height and texture maps at runtime</p></li><li><p>Created a Unity application for displaying a 3D generated world, with multiple perspective controls</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "volunteer": {
+      "name": "Volunteering",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "volunteer",
+      "items": []
+    },
+    "interests": {
+      "name": "Interests",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "interests",
+      "items": []
+    },
+    "languages": {
+      "name": "Languages",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "languages",
+      "items": [
+        {
+          "id": "q3lx2ddlxwacysfi7patlina",
+          "visible": true,
+          "name": "English",
+          "description": "",
+          "level": 5
+        },
+        {
+          "id": "pr21djv3fw4nfdh10rve6zgx",
+          "visible": true,
+          "name": "French",
+          "description": "",
+          "level": 4
+        },
+        {
+          "id": "ym7cstyvrucqp4ted7gs25eg",
+          "visible": true,
+          "name": "Urdu",
+          "description": "",
+          "level": 2
+        }
+      ]
+    },
+    "profiles": {
+      "name": "Profiles",
+      "columns": 2,
+      "separateLinks": true,
+      "visible": true,
+      "id": "profiles",
+      "items": [
+        {
+          "id": "mdmafo60tdm8jur83tg93ice",
+          "visible": true,
+          "network": "Website",
+          "username": "a--ab.com",
+          "icon": "readthedocs",
+          "url": {
+            "label": "",
+            "href": "https://a--ab.com"
+          }
+        },
+        {
+          "id": "mf851xmsody3t53akvq0zis1",
+          "visible": true,
+          "network": "LinkedIn",
+          "username": "AwwabM",
+          "icon": "linkedin",
+          "url": {
+            "label": "",
+            "href": "http://www.linkedin.com/in/AwwabM"
+          }
+        },
+        {
+          "id": "gp5hmplt7vz4fkeubtz0we1v",
+          "visible": true,
+          "network": "GitHub",
+          "username": "obliviance",
+          "icon": "github",
+          "url": {
+            "label": "",
+            "href": "https://github.com/obliviance"
+          }
+        }
+      ]
+    },
+    "projects": {
+      "name": "Projects",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "projects",
+      "items": []
+    },
+    "publications": {
+      "name": "Publications",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "publications",
+      "items": [
+        {
+          "id": "o252iqu237vdu96olpajz9u2",
+          "visible": true,
+          "name": "DocStructNet: A Foundational Model for Semantic Segmentation of Complex Document Layouts",
+          "publisher": "Preprint (ICPRAM 2026)",
+          "date": "September 2025",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "references": {
+      "name": "References",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "references",
+      "items": []
+    },
+    "skills": {
+      "name": "Skills",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "skills",
+      "items": [
+        {
+          "id": "gig07nr4f2z8mfzfr2irro6e",
+          "visible": false,
+          "name": "Operating Systems",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Linux",
+            "Windows",
+            "Android"
+          ]
+        },
+        {
+          "id": "nhhjx16x029k79f0p1r5ls05",
+          "visible": true,
+          "name": "Programming Languages",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Python",
+            "Bash",
+            "JavaScript",
+            "C#",
+            "Java",
+            "C++",
+            "C",
+            "SQL"
+          ]
+        },
+        {
+          "id": "ocf13x57t2iimnw34rep3vaf",
+          "visible": true,
+          "name": "ML Technologies",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "PyTorch",
+            "Keras",
+            "TensorFlow",
+            "Nvidia Triton Server",
+            "LangChain"
+          ]
+        },
+        {
+          "id": "mg6utxiguqu0cm8matm1700m",
+          "visible": true,
+          "name": "Web Technologies",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "HTML/CSS",
+            "React.js",
+            "React Native",
+            "Node.js",
+            "MongoDB"
+          ]
+        },
+        {
+          "id": "f6bac9rjsjk3fv00vd6ogzqr",
+          "visible": true,
+          "name": "Developer Software",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Git",
+            "Docker",
+            "Wireshark",
+            "Figma",
+            "WordPress",
+            "Unity"
+          ]
+        },
+        {
+          "id": "awzfqsdbovls3gs7azwfzrhe",
+          "visible": true,
+          "name": "Other Technologies",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "Linux",
+            "Android",
+            "IP/TCP/UDP",
+            "Real Time Systems",
+            "Agile",
+            "Azure DevOps",
+            "CI/CD",
+            "Cloud Providers(Azure",
+            "AWS",
+            "GCP)"
+          ]
+        }
+      ]
+    },
+    "custom": {}
+  },
+  "metadata": {
+    "template": "chikorita",
+    "layout": [
+      [
+        [
+          "summary",
+          "experience",
+          "education",
+          "projects",
+          "volunteer",
+          "references"
+        ],
+        [
+          "profiles",
+          "skills",
+          "interests",
+          "certifications",
+          "awards",
+          "publications",
+          "languages"
+        ]
+      ]
+    ],
+    "css": {
+      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}",
+      "visible": false
+    },
+    "page": {
+      "margin": 18,
+      "format": "a4",
+      "options": {
+        "breakLine": true,
+        "pageNumbers": true
+      }
+    },
+    "theme": {
+      "background": "#ffffff",
+      "text": "#000000",
+      "primary": "#0d9488"
+    },
+    "typography": {
+      "font": {
+        "family": "IBM Plex Sans",
+        "subset": "latin",
+        "variants": [
+          "regular"
+        ],
+        "size": 14
+      },
+      "lineHeight": 1.5,
+      "hideIcons": false,
+      "underlineLinks": true
+    },
+    "notes": ""
+  }
+}
