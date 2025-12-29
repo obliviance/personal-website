@@ -4,6 +4,7 @@
   scroll-behavior: smooth;
 }
 
+/* Light and Dark Theme Variables */
 [data-theme='light'] {
   --color-bg: rgb(234, 254, 255);
   --color-text: rgb(1, 20, 21);
@@ -75,4 +76,16 @@ a:has(svg, img)::before {
 
 a:has(svg):hover {
   transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 2rem;
+  }
+
+  .content-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
