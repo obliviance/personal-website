@@ -21,10 +21,14 @@ const { pageTitle } = Astro.props;
 		<Header />
 
 		<div class="content-container">
+
+		<h1>{pageTitle}</h1>
+		<p>...</p>
+		<p><b>CURRENTLY UNDER CONSTRUCTION. PLEASE CHECK BACK LATER.</b></p>
 			<slot />
 		</div>
 
-		<button id="to-top"></button>
+		<button id="to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
 
 		<Footer />
 	</body>
@@ -32,16 +36,15 @@ const { pageTitle } = Astro.props;
 
 <style>
   #to-top {
-  float: right;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 200%;
-  border-radius: 50px;
-  border: 0;
-  cursor: pointer;
-  transition: 0.5s;
-  outline: none;
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	width: 2em;
+	height: 2em;
+	border-radius: 100%;
+	border: none;
+	transition: 0.2s;
+	cursor: pointer;
 }
 
 #to-top:hover {
