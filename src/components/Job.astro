@@ -1,0 +1,98 @@
+---
+interface Props {
+  company: string;
+  position: string;
+  location: string;
+  period: string;
+  description: string;
+}
+
+const { company, position, location, period, description } = Astro.props;
+
+---
+
+<style>
+  .job {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border: var(--global-border);
+    border-radius: var(--global-radius);
+    background-color: color-mix(in srgb, var(--color-accent), transparent 85%);
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .job-title {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .job-title h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+  }
+
+  .job-company {
+    color: var(--color-tone);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .job-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-tone);
+  }
+
+  .job-location {
+    font-style: italic;
+  }
+
+  .job-period {
+    font-weight: 500;
+  }
+
+  .job-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .job-description :global(ul) {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .job-description :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .job-description :global(p) {
+    margin: 0.25rem 0;
+  }
+</style>
+
+<div class="job">
+  <div class="job-header">
+    <span class="job-position">{position}</span>
+    <span class="job-period">{period}</span>
+  </div>
+  <div class="job-details">
+    <span class="job-company">{company}</span>
+    <span class="job-location">{location}</span>
+  </div>
+  <div class="job-description">
+    <Fragment set:html={description} />
+  </div>
+</div>

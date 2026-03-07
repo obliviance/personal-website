@@ -1,0 +1,70 @@
+---
+import Job from './Job.astro';
+
+interface ExperienceItem {
+  id: string;
+  hidden: boolean;
+  company: string;
+  position: string;
+  location: string;
+  period: string;
+  website: {
+    url: string;
+    label: string;
+  };
+  description: string;
+}
+
+interface Props {
+  experiences: ExperienceItem[];
+}
+
+const { experiences } = Astro.props;
+
+// Filter out hidden experiences and sort by date (most recent first)
+const visibleExperiences = experiences
+  .filter((exp) => !exp.hidden)
+  .sort((a, b) => {
+    // Extract start year from period strings like "January 2025 - August 2025"
+    const getStartYear = (period: string) => {
+      const match = period.match(/\d{4}/);
+      return match ? parseInt(match[0]) : 0;
+    };
+
+    return getStartYear(b.period) - getStartYear(a.period);
+  });
+---
+
+<style>
+  .experience-container {
+    margin: 2rem 0;
+  }
+
+  .experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .experience-item {
+    display: contents;
+  }
+</style>
+
+<div class="experience-container">
+  <ul class="experience-list">
+    {
+      visibleExperiences.map((experience) => (
+        <li class="experience-item">
+          <Job
+            company={experience.company}
+            position={experience.position}
+            location={experience.location}
+            period={experience.period}
+            description={experience.description}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</div>
