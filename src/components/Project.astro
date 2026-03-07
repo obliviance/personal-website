@@ -1,0 +1,149 @@
+---
+interface Props {
+  name: string;
+  period: string;
+    website: {
+        url: string;
+        label: string;
+    };
+  description: string;
+  tags: string[];
+}
+
+const { name, period, website, description, tags } = Astro.props;
+
+function stripHtml(htmlString: string): string {
+  return htmlString
+    .replace(/<\/p>/g, '\n')
+    .replace(/<\/li>/g, '\n')
+    .replace(/<[^>]*>/g, '')
+    .trim();
+}
+
+const stripped_description = stripHtml(description);
+---
+
+<style>
+  .project {
+    max-width: 30%;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border: var(--global-border);
+    border-radius: var(--global-radius);
+    background-color: color-mix(in srgb, var(--color-accent), transparent 90%);
+  }
+
+  @media (max-width: 700px) {
+    .project {
+      max-width: 100%;
+    }
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .project-name {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .project-name h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+  }
+
+  .project-website {
+    color: var(--color-tone);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .project-website a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .project-website a:hover {
+    text-decoration: underline;
+  }
+
+  .project-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-tone);
+  }
+
+  .project-period {
+    font-weight: 500;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .project-description :global(ul) {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .project-description :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .project-description :global(p) {
+    margin: 0.25rem 0;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .project-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--color-tone, #f0f0f0);
+    color: var(--color-bg, #333);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+</style>
+
+<div class="project">
+  <div class="project-header">
+    <div class="project-name">
+      <h3><a href={website.url} target="_blank" rel="noopener noreferrer">{name}↗</a></h3>
+    </div>
+  </div>
+  {period && (
+    <div class="project-details">
+      <span class="project-period">{period}</span>
+    </div>
+  )}
+  <div class="project-description">
+    <Fragment set:html={stripped_description} />
+  </div>
+  {tags && tags.length > 0 && (
+    <div class="project-tags">
+      {tags.map((tag) => (
+        <span class="project-tag">{tag}</span>
+      ))}
+    </div>
+  )}
+</div>

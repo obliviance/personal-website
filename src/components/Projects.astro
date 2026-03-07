@@ -1,0 +1,65 @@
+---
+import Project from './Project.astro';
+
+interface ProjectItem {
+  id: string;
+  hidden: boolean;
+  name: string;
+  period: string;
+  website: {
+    url: string;
+    label: string;
+  };
+  description: string;
+  tags: string[];
+}
+
+interface Props {
+  projects: ProjectItem[];
+}
+
+const { projects } = Astro.props;
+
+// Filter out hidden projects and sort by date (most recent first)
+const visibleProjects = projects
+  .filter((proj) => !proj.hidden)
+  .sort((a, b) => {
+    // Extract start year from period strings like "January 2025 - August 2025"
+    const getStartYear = (period: string) => {
+      const match = period.match(/\d{4}/);
+      return match ? parseInt(match[0]) : 0;
+    };
+
+    return getStartYear(b.period) - getStartYear(a.period);
+  });
+---
+
+<style>
+  .projects-container {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .projects-item {
+    display: contents;
+  }
+</style>
+
+<div class="projects-container">
+    {
+      visibleProjects.map((project) => (
+        <div class="projects-item">
+          <Project
+            name={project.name}
+            period={project.period}
+            website={project.website}
+            description={project.description}
+            tags={project.tags}
+          />
+        </div>
+      ))
+    }
+</div>
