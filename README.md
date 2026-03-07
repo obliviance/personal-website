@@ -9,7 +9,7 @@ The colour palette is extracted from the AM Logo. For light mode the mapping is:
 - Background: rgb(234, 254, 255)
 - Text: rgb(1, 20, 21)
 - Accent: rgb(0, 191, 211)
-- Border: rgb(18, 118, 128)
+- Tone: rgb(18, 118, 128)
 
 Using the Lato font from Google Fonts, falling back to Arial and sans-serif.
 
