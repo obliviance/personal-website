@@ -1,0 +1,55 @@
+---
+interface EducationItem {
+    id: string;
+    hidden: boolean;
+    options: {
+        showLinkInTitle: boolean;
+    };
+    school: string;
+    degree: string;
+    area: string;
+    grade: string;
+    location: string;
+    period: string;
+    website: {
+        url: string;
+        label: string;
+    };
+    description: string;
+}
+
+interface Props {
+    education: EducationItem;
+}
+
+const { education } = Astro.props;
+
+---
+
+<style>
+    .education-container {
+        margin-bottom: 2rem;
+        padding: 2rem;
+        border: var(--global-border);
+        border-radius: var(--global-radius);
+        background-color: color-mix(in srgb, var(--color-accent), transparent 85%);
+    }
+</style>
+
+<div class="education-container">
+    <h3>
+        {education.options.showLinkInTitle && education.website.url ? (
+            <a href={education.website.url} target="_blank" rel="noopener noreferrer">
+                {education.school}
+            </a>
+        ) : (
+            education.school
+        )}
+    </h3>
+    <p>{education.period}</p>
+    <p>{education.degree}</p>
+    <p>{education.area}</p>
+    <p>{education.grade}</p>
+    <p>{education.location}</p>
+    <p>{education.description}</p>
+</div>
