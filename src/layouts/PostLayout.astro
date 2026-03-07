@@ -9,7 +9,6 @@ type Props = MarkdownLayoutProps<{
             src: string;
             alt: string;
         };
-    category: string;
     tags: string[];
 }>;
 
@@ -19,7 +18,6 @@ const { frontmatter, rawContent } = Astro.props;
 
 // Function to estimate reading time (words per minute)
 function calculateReadingTime(text: string, wpm = 200) {
-    if (text) return { wordCount: 0, minutes: 0 };
     const words = text.split(/\s+/).filter(word => word.length > 0);
     const wordCount = words.length;
     const minutes = Math.ceil(wordCount / wpm);
@@ -31,18 +29,93 @@ const { wordCount, minutes } = calculateReadingTime(rawContent());
 import BaseLayout from './BaseLayout.astro';
 const pageTitle = frontmatter.title;
 
-import '../styles/global.css';
 ---
-<BaseLayout pageTitle={pageTitle}>
-<meta charset="utf-8" />
-<h1>{frontmatter.title}</h1>
-<p>{frontmatter.pubDate.toString().slice(0,10)}</p>
-<p><em>{frontmatter.description}</em></p>
-<p>Written by: {frontmatter.author}</p>
-<ul>
-    <li>Tags: {frontmatter.tags.join(', ')}</li>
-    <li>Reading time: {minutes} minutes</li>
-    <li>Category: {frontmatter.category}</li>
-</ul>
+
+<BaseLayout pageTitle={pageTitle} hideSidebar={true}>
+<style>
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 2rem auto;
+    }
+    .back-button {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: transparent;
+        border: var(--global-border);
+        border-radius: var(--global-radius);
+        color: var(--color-accent);
+        cursor: pointer;
+        transition: var(--global-transition)
+    }
+    .back-button:hover {
+        background-color: var(--color-accent);
+        color: var(--color-bg);
+    }
+    .post-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .post-creation {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .post-date {
+        color: gray;
+    }
+    .post-details {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .post-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    .post-tag {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background-color: var(--color-tone);
+        color: var(--color-bg);
+        border-radius: var(--global-radius);
+        font-size: 0.70em;
+    }
+    .post-reading-time {
+        color: gray;
+        font-size: 0.7em;
+    }
+</style>
+
+<button class="back-button" onclick="window.history.back()">← Back</button>
+<div class="post-header">
+    <div class="post-head">
+        <h1>{frontmatter.title}</h1>
+        <div class="post-creation">
+            <p>Written by: {frontmatter.author}</p>
+            <p class="post-date">{new Date(frontmatter.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</p>
+        </div>
+    </div>
+    <div class="post-details">
+        {frontmatter.tags && frontmatter.tags.length > 0 && (
+        <div class="post-tags">
+        {frontmatter.tags.map((tag) => (
+            <span class="post-tag">{tag}</span>
+        ))}
+        </div>
+        <p class="post-reading-time">Reading time: {minutes} minutes</p>
+    )}
+    </div>
+</div>
+
 <slot />
+
 </BaseLayout>
