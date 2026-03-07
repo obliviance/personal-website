@@ -1,0 +1,39 @@
+---
+import SkillList from './SkillList.astro';
+
+interface SkillItem {
+    id: string;
+    hidden: boolean;
+    icon: string;
+    name: string;
+    proficiency: string;
+    level: number;
+    keywords: string[];
+}
+
+interface Props {
+    skills: SkillItem[];
+}
+
+const { skills } = Astro.props;
+
+// Filter out hidden projects and sort by date (most recent first)
+const visibleSkills = skills
+  .filter((skill) => !skill.hidden);
+---
+<style>
+</style>
+
+<div class="skills">
+  <h2>Skills</h2>
+  <div class="skill-category">
+    {
+        visibleSkills.map((skill) => (
+            <SkillList
+            name={skill.name}
+            keywords={skill.keywords}
+            />
+        ))
+    }
+  </div>
+</div>

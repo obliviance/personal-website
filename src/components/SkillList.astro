@@ -1,0 +1,35 @@
+---
+interface Props {
+  name: string;
+  keywords: string[];
+}
+
+
+const { name, keywords } = Astro.props;
+
+---
+<style>
+    .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .skill {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background-color: var(--color-tone, #f0f0f0);
+        color: var(--color-bg, #333);
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+</style>
+
+<h3>{name}</h3>
+<div class="skill-list">
+    {
+        keywords.map((keyword) => (
+            <span class="skill">{keyword}</span>
+        ))
+    }
+</div>
