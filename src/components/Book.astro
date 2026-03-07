@@ -1,0 +1,213 @@
+---
+interface Props {
+    title: string;
+    author?: string;
+    url: string;
+    pageCount?: number;
+    description?: string;
+}
+
+/* Generates a random book height based on a normalized stepped function */
+function getRandomBookHeight(): number {
+    const baseHeight = 200; // Minimum height in pixels
+    const maxAdditionalHeight = 100; // Max additional height based on page count
+    const randomFactor = Math.random(); // Random number between 0 and 1
+
+    // Use a stepped function to create distinct height tiers
+    if (randomFactor < 0.2) {
+        return baseHeight; // Short book
+    } else if (randomFactor < 0.5) {
+        return baseHeight + maxAdditionalHeight * 0.25; // Medium-short book
+    } else if (randomFactor < 0.8) {
+        return baseHeight + maxAdditionalHeight * 0.5; // Medium-tall book
+    } else {
+        return baseHeight + maxAdditionalHeight; // Tall book
+    }
+}
+
+/* Selects a random font from a predefined list for book spines */
+function getRandomBookFont(): string {
+    const bookSpineFonts = [
+        {
+            name: "Garamond",
+            style: "Classic Literary",
+            stack: "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif"
+        },
+        {
+            name: "Baskerville",
+            style: "Academic / Formal",
+            stack: "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif"
+        },
+        {
+            name: "Caslon",
+            style: "Traditional / Dependable",
+            stack: "'Adobe Caslon Pro', 'Big Caslon', 'Libre Caslon', Caslon, Georgia, serif"
+        },
+        {
+            name: "Palatino",
+            style: "Elegant Fiction",
+            stack: "Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif"
+        },
+        {
+            name: "Georgia",
+            style: "Modern / High Legibility",
+            stack: "Georgia, Times, 'Times New Roman', serif"
+        },
+        {
+            name: "Bodoni",
+            style: "Artistic / High Contrast",
+            stack: "'Bodoni MT', 'Bodoni 72', Didot, 'Didot LT STD', 'Hoefler Text', serif"
+        },
+        {
+            name: "Times New Roman",
+            style: "Standard / Authoritative",
+            stack: "'Times New Roman', Times, serif"
+        },
+        {
+            name: "Helvetica",
+            style: "Modern Non-Fiction",
+            stack: "Helvetica, 'Helvetica Neue', Arial, sans-serif"
+        },
+        {
+            name: "Century Gothic",
+            style: "Geometric / Sci-Fi",
+            stack: "'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;"
+        },
+        {
+            name: "Gill Sans",
+            style: "Humanist / Friendly",
+            stack: "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif"
+        }
+    ];
+
+
+    return bookSpineFonts[Math.floor(Math.random() * bookSpineFonts.length)].stack;
+}
+
+// Generate a random percentage for color-mix
+const colorMixPercentage = Math.floor(Math.random() * 100);
+const bookHeight = getRandomBookHeight();
+const bookFont = getRandomBookFont();
+
+// NEW: Add a subtle random lean (between -1.5 and 1.5 degrees)
+const randomLean = (Math.random() * 1.5 - 0.75).toFixed(2);
+// NEW: Randomize the "grain" opacity slightly for variety
+const textureOpacity = (Math.random() * 0.05 + 0.02).toFixed(2);
+
+const { title, author, url, pageCount, description } = Astro.props;
+---
+
+<style>
+    .book-container {
+        perspective: 1000px;
+        height: 100%;
+    }
+
+    .book {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0.5rem;
+        border-radius: 0.15rem 0.25rem 0.25rem 0.15rem;
+        width: 100%;
+        height: var(--bookHeight);
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform-style: preserve-3d;
+        position: relative;
+        overflow: hidden;
+
+        /* Rotate around the bottom center to minimize overflow into adjacent books */
+        transform-origin: bottom center;
+        /* Apply the random lean */
+        transform: rotateZ(var(--lean));
+        
+        /* THE REALISM LAYER: Multiple Gradients */
+        background: 
+            /* Layer 1: The Grain Texture (Subtle Noise) */
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"),
+            /* Layer 2: The Spine Contour (Highlights and Creases) */
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,0.2) 0%,      /* Left edge shadow */
+                rgba(255,255,255,0) 5%, 
+                rgba(255,255,255,0.2) 15%, /* Light hitting the 'shoulder' */
+                rgba(255,255,255,0) 50%,   /* Center flat */
+                rgba(0,0,0,0.1) 90%,     /* The 'hinge' crease */
+                rgba(0,0,0,0.2) 100%     /* Right edge shadow */
+            ),
+            /* Layer 3: Your original Dynamic Color */
+            color-mix(
+                in srgb,
+                var(--color-bg) calc(100% - var(--colorMixPct)),
+                var(--color-accent) var(--colorMixPct)
+            );
+
+        /* Improved Shadow: Contact shadow + Soft diffuse shadow */
+        box-shadow:
+            inset 1px 0 1px rgba(255,255,255,0.1), /* Hard highlight on very edge */
+            -2px 4px 2px rgba(0,0,0,0.3),          /* Tight contact shadow */
+            -5px 10px 15px rgba(0,0,0,0.15);       /* Distant soft shadow */
+    }
+
+    .book:hover {
+        transform: translateY(-25px) translateZ(20px) rotateX(8deg)
+            rotateZ(-2deg);
+        box-shadow:
+            inset -2px 0 4px rgba(0, 0, 0, 0.2),
+            -8px 15px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .book-spine {
+        display: flex;
+        flex-direction: column;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-weight: 700;
+        font-size: 0.95rem;
+        font-family: var(--bookFont);
+        text-align: center;
+        color: var(--color-text);
+        word-break: break-word;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        overflow: hidden;
+    }
+
+    .spine-text {
+        font-weight: 700;
+        font-size: 0.95rem;
+        line-height: 1.2;
+    }
+
+    .book-author {
+        font-size: 0.5rem;
+        font-family: 'Arial Narrow'
+    }
+</style>
+
+<div class="book-container">
+    <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="book"
+        style={`
+            --colorMixPct: ${colorMixPercentage}%; 
+            --bookHeight: ${bookHeight}px; 
+            --bookFont: ${bookFont}; 
+            --lean: ${randomLean}deg;
+            --texOpacity: ${textureOpacity};
+        `}
+    >
+        <div class="book-spine">
+            <div class="spine-text">{title} | <span class="book-author">{author}</span></div>
+        </div>
+    </a>
+</div>
