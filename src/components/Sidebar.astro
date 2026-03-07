@@ -1,0 +1,93 @@
+---
+---
+
+<style>
+    #sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 0.5rem;
+        z-index: 999;
+    }
+    #bar {
+        width: 0.2rem;
+        height: 95vh;
+        z-index: 1000;
+        border-radius: 1rem;
+        flex-shrink: 0;
+        background: linear-gradient(to bottom, 
+            var(--color-accent) 0%, 
+            var(--color-accent) var(--scroll-progress, 0%), 
+            var(--color-text) var(--scroll-progress, 0%), 
+            var(--color-text) 100%);
+    }
+    #nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 95vh;
+        flex: 1;
+    }
+    .nav-link {
+        font-size: 1rem;
+        color: var(--color-tone);
+        transition: filter 0.3s ease, font-weight 0.3s ease, font-size 0.3s ease;
+    }
+    .nav-link.active {
+        color: var(--color-accent);
+        font-weight: 800;
+        font-size: 1.1rem;
+    }
+</style>
+
+<script>
+    document.addEventListener('scroll', () => {
+        /* Fills up the bar in the sidebar as the user scrolls */
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = (window.scrollY / scrollHeight) * 100;
+        document.documentElement.style.setProperty('--scroll-progress', scrolled + '%');
+
+        /* Highlights the current section in the sidebar */
+        const sections = document.querySelectorAll('section[id]');
+        let currentSection = 'about';
+        sections.forEach(section => {
+            const sectionElement = section as HTMLElement;
+            const sectionTop = sectionElement.offsetTop;
+            if (window.scrollY >= sectionTop - 60) {
+                const id = section.getAttribute('id');
+                if (id) {
+                    currentSection = id;
+                }
+            }
+            /* Check if we've reached the bottom of the page */
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight) {
+                currentSection = 'contact';
+            }
+        });
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            const linkElement = link as HTMLElement;
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    linkElement.classList.add('active');
+                } else {
+                    linkElement.classList.remove('active');
+                }
+            }
+        );
+    }); 
+</script>
+
+<div id="sidebar">
+    <div id="bar"></div>
+    <div id="nav-container">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-link" href="#contact">Contact</a>
+    </div>
+</div>
