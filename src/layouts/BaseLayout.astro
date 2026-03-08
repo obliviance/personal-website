@@ -46,6 +46,7 @@ const { pageTitle, hideSidebar = false } = Astro.props;
 	}
 	#to-top {
 		position: fixed;
+		z-index: 1000;
 		bottom: 3rem;
 		right: 3rem;
 		width: 2em;
@@ -54,6 +55,7 @@ const { pageTitle, hideSidebar = false } = Astro.props;
 		border: none;
 		transition: var(--global-transition);
 		cursor: pointer;
+		color: var(--color-bg);
 		background-color: var(--color-text);
 	}
 
