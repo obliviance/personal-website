@@ -1,4 +1,6 @@
 ---
+import OpenInNewTab from "./icons/OpenInNewTab.astro";
+
 /* Extracts all post metadata for each post in pages/posts/ */
 const posts = import.meta.glob("../pages/posts/*.md", { eager: true });
 const sortedPosts = Object.entries(posts)
@@ -43,7 +45,7 @@ const sortedPosts = Object.entries(posts)
     {
         sortedPosts.map((post) => (
             <div class="post">
-                <a href={post.url}>{post.frontmatter.title}↗</a>
+                <a href={post.url}>{post.frontmatter.title}</a><OpenInNewTab />
                 <span>
                     {new Date(post.frontmatter.pubDate).toLocaleDateString(
                         "en-US",

@@ -1,4 +1,6 @@
 ---
+import OpenInNewTab from './icons/OpenInNewTab.astro';
+
 interface Props {
   name: string;
   period: string;
@@ -128,7 +130,7 @@ const stripped_description = stripHtml(description);
 <div class="project">
   <div class="project-header">
     <div class="project-name">
-      <h3><a href={website.url} target="_blank" rel="noopener noreferrer">{name}↗</a></h3>
+      <h3><a href={website.url} target="_blank" rel="noopener noreferrer">{name}</a><OpenInNewTab/></h3>
     </div>
   </div>
   {period && (
