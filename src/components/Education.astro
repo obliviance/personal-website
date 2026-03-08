@@ -28,28 +28,29 @@ const { education } = Astro.props;
 
 <style>
     .education-container {
-        margin-bottom: 2rem;
         padding: 2rem;
         border: var(--global-border);
         border-radius: var(--global-radius);
         background-color: color-mix(in srgb, var(--color-accent), transparent 85%);
     }
+    .education-header {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+    }
+    .education-details {
+        display: flex;
+        justify-content: space-between;
+    }
 </style>
 
 <div class="education-container">
-    <h3>
-        {education.options.showLinkInTitle && education.website.url ? (
-            <a href={education.website.url} target="_blank" rel="noopener noreferrer">
-                {education.school}
-            </a>
-        ) : (
-            education.school
-        )}
-    </h3>
-    <p>{education.period}</p>
-    <p>{education.degree}</p>
-    <p>{education.area}</p>
-    <p>{education.grade}</p>
-    <p>{education.location}</p>
-    <p>{education.description}</p>
+    <div class="education-header">
+        <span class="university">{education.school}</span>
+        <span class="period">{education.period}</span>
+    </div>
+    <div class="education-details">
+        <span class="degree">{education.degree}</span>
+        <span class="area">{education.area}</span>
+    </div>
 </div>
