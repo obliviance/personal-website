@@ -1,0 +1,578 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "",
+    "size": 64,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Awwab Mahdi",
+    "headline": "",
+    "email": "awwab.mahdi@gmail.com",
+    "phone": "6138796715",
+    "location": "Ottawa, ON",
+    "website": {
+      "url": "https://a--ab.com",
+      "label": ""
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Summary",
+    "columns": 1,
+    "hidden": true,
+    "content": "<p>Growing researcher and developer, looking to apply experience with machine learning to critical services. Combining a strong foundation in Computer Science and Cybersecurity with skills in document analysis, NLP, and MLOps.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "columns": 2,
+      "hidden": false,
+      "items": [
+        {
+          "id": "mdmafo60tdm8jur83tg93ice",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "icon": "paperclip",
+          "network": "Website",
+          "username": "a--ab.com",
+          "website": {
+            "url": "https://a--ab.com",
+            "label": ""
+          }
+        },
+        {
+          "id": "mf851xmsody3t53akvq0zis1",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "icon": "linkedin-logo",
+          "network": "LinkedIn",
+          "username": "AwwabM",
+          "website": {
+            "url": "http://www.linkedin.com/in/AwwabM",
+            "label": ""
+          }
+        },
+        {
+          "id": "gp5hmplt7vz4fkeubtz0we1v",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "icon": "github-logo",
+          "network": "GitHub",
+          "username": "obliviance",
+          "website": {
+            "url": "https://github.com/obliviance",
+            "label": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "pgjjobkpx7s82zb3ts9682f0",
+          "hidden": false,
+          "company": "Department of National Defence Canada",
+          "position": "Data Science Developer",
+          "location": "285 Coventry Rd., Ottawa, ON",
+          "period": "January 2025 - August 2025",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Implemented, trained, and tested an optimized 40M parameter document segmentation model(DocStructNet), with 97% accuracy on the DocLayNet and PubLayNet datasets</p></li><li><p>Used the AWS fmeval library, along with ECS, EC2, S3 and SageMaker to deploy a government chatbot with an evaluation pipeline</p></li><li><p>Reworked a Transport Canada Protected B application to replace AzureBlobService with a local version, and produced an exhaustive report on its functionality and security</p></li><li><p>Completed tickets in an Azure DevOps environment, interfacing with Azure GPU VMs, Azure Container Registry, and Azure SQL Database</p></li></ul>"
+        },
+        {
+          "id": "tut8na2zbfh6ma9km8vn90w5",
+          "hidden": true,
+          "company": "Public Service & Procurement Canada",
+          "position": "IM/IT Team Member",
+          "location": "Ottawa",
+          "period": "February 2024 - June 2024",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Maintained the IT requests inbox for the Human Capital Pay Administration Branch with &gt;1000 employees</p></li><li><p>Created a Bash script that was used to a collate and process network data from all 200+ employees in branch</p></li><li><p>Acted as a Local Registration Authority for myKEY creations and recoveries, and met with clients daily to grant access and troubleshoot problems</p></li></ul>"
+        },
+        {
+          "id": "gue3q33ghbnoda39l9ree5ho",
+          "hidden": false,
+          "company": "IRM Consulting & Advisory",
+          "position": "AI Developer",
+          "location": "Remote",
+          "period": "December 2023 - January 2024",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Finetuned an open source LLM from the Hugging Face model library that enabled GPU costs to be reduced by 90%</p></li><li><p>Cleaned CIS Controls data from SCF, SOC II, CMMC and other cybersecurity frameworks</p></li><li><p>Used LangChain and HuggingFace embeddings to build a file-based chatbot that was able to effectively interact with clients and respond to queries</p></li></ul>"
+        },
+        {
+          "id": "abjw6czsv7kyyc3y5xrmzhhj",
+          "hidden": false,
+          "company": "eWorx Technology",
+          "position": "Mobile App Team Colead",
+          "location": "Remote",
+          "period": "September 2022 - June 2023",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Studied Figma best practices and built several mock-ups to present to the client</p></li><li><p>Translated Figma components into functional React Native components</p></li><li><p>Used a provided REST API to integrate live data into the app</p></li></ul>"
+        },
+        {
+          "id": "ahkwffwlpwuk2fguvfft8eal",
+          "hidden": true,
+          "company": "AIModelsTech",
+          "position": "GIS Developer",
+          "location": "Remote",
+          "period": "January 2025 - March 2025",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<ul><li><p>Developed scripts for loading and processing map data from Google Earth Engine</p></li><li><p>Created a python Flask server for processing and serving height and texture maps at runtime</p></li><li><p>Created a Unity application for displaying a 3D generated world, with multiple perspective controls</p></li></ul>"
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "cpdklhgh0cixwbevzznkaest",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "school": "Carleton University",
+          "degree": "Cybersecurity Stream",
+          "area": "Bachelors of Computer Science",
+          "grade": "",
+          "location": "",
+          "period": "September 2021 - February 2026",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "qj8l7h9y1s5n2v4c0w3e6zbr",
+          "hidden": false,
+          "name": "Personal Website",
+          "period": "April 2025 - Present",
+          "website": {
+            "url": "https://github.com/obliviance/personal-website",
+            "label": ""
+          },
+          "description": "<ul><li><p>Developed a responsive personal website using Astro.js and GitHub Pages</p></li></ul>",
+          "tags": [
+            "Astro",
+            "JavaScript",
+            "HTML/CSS"
+          ]
+        },
+        {
+          "id": "qj8l7h9y1s5n2v4c0w3e6zbr",
+          "hidden": false,
+          "name": "Forecasting Agent",
+          "period": "November 2025 - Present",
+          "website": {
+            "url": "https://github.com/obliviance/forecasting-agent",
+            "label": ""
+          },
+          "description": "<ul><li><p>Built a forecasting agent using OpenRouter to predict future events</p></li></ul>",
+          "tags": [
+            "Python",
+            "OpenRouter",
+            "Agents"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "gig07nr4f2z8mfzfr2irro6e",
+          "hidden": true,
+          "icon": "",
+          "name": "Operating Systems",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Linux",
+            "Windows",
+            "Android"
+          ]
+        },
+        {
+          "id": "nhhjx16x029k79f0p1r5ls05",
+          "hidden": false,
+          "icon": "",
+          "name": "Programming Languages",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Python",
+            "Bash",
+            "JavaScript",
+            "C#",
+            "Java",
+            "C++",
+            "C",
+            "SQL"
+          ]
+        },
+        {
+          "id": "ocf13x57t2iimnw34rep3vaf",
+          "hidden": false,
+          "icon": "",
+          "name": "ML Technologies",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "PyTorch",
+            "Keras",
+            "TensorFlow",
+            "Nvidia Triton Server",
+            "LangChain"
+          ]
+        },
+        {
+          "id": "mg6utxiguqu0cm8matm1700m",
+          "hidden": false,
+          "icon": "",
+          "name": "Web Technologies",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "HTML/CSS",
+            "React.js",
+            "React Native",
+            "Node.js",
+            "MongoDB"
+          ]
+        },
+        {
+          "id": "f6bac9rjsjk3fv00vd6ogzqr",
+          "hidden": false,
+          "icon": "",
+          "name": "Developer Software",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Git",
+            "Docker",
+            "Wireshark",
+            "Figma",
+            "WordPress",
+            "Unity"
+          ]
+        },
+        {
+          "id": "awzfqsdbovls3gs7azwfzrhe",
+          "hidden": false,
+          "icon": "",
+          "name": "Other Technologies",
+          "proficiency": "",
+          "level": 0,
+          "keywords": [
+            "Linux",
+            "Android",
+            "IP/TCP/UDP",
+            "Real Time Systems",
+            "Agile",
+            "Azure DevOps",
+            "CI/CD",
+            "Cloud Providers(Azure",
+            "AWS",
+            "GCP)"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "q3lx2ddlxwacysfi7patlina",
+          "hidden": false,
+          "language": "English",
+          "fluency": "",
+          "level": 5
+        },
+        {
+          "id": "pr21djv3fw4nfdh10rve6zgx",
+          "hidden": false,
+          "language": "French",
+          "fluency": "",
+          "level": 4
+        },
+        {
+          "id": "ym7cstyvrucqp4ted7gs25eg",
+          "hidden": false,
+          "language": "Urdu",
+          "fluency": "",
+          "level": 2
+        }
+      ]
+    },
+    "interests": {
+      "title": "Interests",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "awards": {
+      "title": "Awards",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "publications": {
+      "title": "Publications",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "o252iqu237vdu96olpajz9u2",
+          "hidden": false,
+          "title": "DocStructNet: A Foundational Model for Semantic Segmentation of Complex Document Layouts",
+          "publisher": "Preprint (ICPRAM 2026)",
+          "date": "September 2025",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "books": {
+      "title": "Bookshelf",
+      "columns": 1,
+      "hidden": true,
+      "items": [
+        {
+          "id": "book1",
+          "hidden": false,
+          "title": "Superforecasting",
+          "author": "Philip E. Tetlock, Dan Gardner",
+          "url": "https://www.goodreads.com/book/show/23995360-superforecasting",
+          "pageCount": 352,
+          "description": "The Art and Science of Prediction: A book that explores the skills and techniques of top forecasters, based on a multi-year research project."
+        },
+        {
+          "id": "book2",
+          "hidden": false,
+          "title": "⿻ 數位 Plurality",
+          "author": "E. Glen Weyl, E. Glen Weyl (contributor), Audrey Tang",
+          "url": "https://plurality.net/",
+          "pageCount": 584,
+          "description": "The Future of Collaborative Technology and Democracy: A book that discusses the potential of digital technologies to create more inclusive and democratic societies, and explores the concept of 'plurality' as a framework for understanding the future of collaboration and governance."
+        },
+        {
+          "id": "book3",
+          "hidden": false,
+          "title": "Dao of the Bizarre Immortal",
+          "author": "Fox-Tail Pen",
+          "url": "https://www.novelupdates.com/series/dao-of-the-bizarre-immortal/",
+          "pageCount": 4303,
+          "description": "A Chinese webnovel that follows the life of a young man trapped between two realities."
+        },
+        {
+          "id": "book4",
+          "hidden": false,
+          "title": "Semiosis",
+          "author": "Sue Burke",
+          "url": "https://www.goodreads.com/en/book/show/35018907-semiosis",
+          "pageCount": 333,
+          "description": "A sci-fi novel that describes first contact with an alien species over generations."
+        },
+        {
+          "id": "book5",
+          "hidden": false,
+          "title": "Piranesi",
+          "author": "Susanne Clarke",
+          "url": "https://www.goodreads.com/book/show/50202953-piranesi",
+          "pageCount": 400,
+          "description": "A novel about a House, with Tides, and a man trying to navigate it."
+        },
+        {
+          "id": "book6",
+          "hidden": false,
+          "title": "Reinforcement Learning",
+          "author": "Richard S. Sutton, Andrew G. Barto",
+          "url": "https://mitpress.mit.edu/9780262039246/reinforcement-learning/",
+          "pageCount": 322,
+          "description": "The canonical introduction to the field of Reinforcement Learning."
+        },
+        {
+          "id": "book7",
+          "hidden": false,
+          "title": "Computer and Internet Security",
+          "author": "Paul C. Van Oorschot",
+          "url": "https://www.goodreads.com/book/show/85286864-computer-security-and-the-internet",
+          "pageCount": 446,
+          "description": "Tools and Jewels from Malware to Bitcoin is a valuable introduction to cybersecurity."
+        },
+        {
+          "id": "book8",
+          "hidden": false,
+          "title": "Rationality: From AI to Zombies",
+          "author": "Eliezer Yudkowsky",
+          "url": "https://www.readthesequences.com/",
+          "pageCount": 1813,
+          "description": "Blogposts on applying principles of truth-seeking to the problem of the future of humanity, compiled over two years."
+        },
+        {
+          "id": "book9",
+          "hidden": false,
+          "title": "Reasons to be Cheerful",
+          "author": "Greg Egan",
+          "url": "https://www.goodreads.com/book/show/4988167-reasons-to-be-cheerful",
+          "pageCount": 32,
+          "description": "A short story on what it means to be happy."
+        },
+        {
+          "id": "book10",
+          "hidden": false,
+          "title": "Flowers for Algernon",
+          "author": "Daniel Keyes",
+          "url": "https://www.goodreads.com/book/show/18373.Flowers_for_Algernon",
+          "pageCount": 311,
+          "description": "A short story on how our minds shape us."
+        },
+        {
+          "id": "book7",
+          "hidden": false,
+          "title": "Starting Over",
+          "author": "Sugaru Miaki, 三秋縋, 洪于琇 (Translator), E9L (Illustrator)",
+          "url": "https://www.goodreads.com/book/show/29637615-starting-over",
+          "pageCount": 226,
+          "description": "A translated Japanese light novel about how we value our time."
+        }
+      ]
+    },
+    "customSections": [],
+    "metadata": {
+      "template": "chikorita",
+      "layout": {
+        "sidebarWidth": 35,
+        "pages": [
+          {
+            "fullWidth": false,
+            "main": [
+              "education",
+              "experience",
+              "projects",
+              "volunteer",
+              "references"
+            ],
+            "sidebar": [
+              "profiles",
+              "skills",
+              "interests",
+              "certifications",
+              "awards",
+              "publications",
+              "languages"
+            ]
+          }
+        ]
+      },
+      "css": {
+        "enabled": false,
+        "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}"
+      },
+      "page": {
+        "gapX": 4,
+        "gapY": 6,
+        "marginX": 18,
+        "marginY": 18,
+        "format": "a4",
+        "locale": "en-US",
+        "hideIcons": false
+      },
+      "design": {
+        "level": {
+          "icon": "star",
+          "type": "rectangle-full"
+        },
+        "colors": {
+          "primary": "rgba(13, 148, 136, 1)",
+          "text": "rgba(0, 0, 0, 1)",
+          "background": "rgba(255, 255, 255, 1)"
+        }
+      },
+      "typography": {
+        "body": {
+          "fontFamily": "IBM Plex Sans",
+          "fontWeights": [
+            "400",
+            "600"
+          ],
+          "fontSize": 10.5,
+          "lineHeight": 1.5
+        },
+        "heading": {
+          "fontFamily": "IBM Plex Sans",
+          "fontWeights": [
+            "600"
+          ],
+          "fontSize": 13.5,
+          "lineHeight": 1.5
+        }
+      },
+      "notes": ""
+    }
+  }
+}
