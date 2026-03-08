@@ -4,7 +4,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import OpenInNewTab from "../components/icons/OpenInNewTab.astro";
-import Link from "../components/icons/Link.astro";
+
+import hikeImage from "../assets/hike.jpg?url";
 
 import Bookshelf from "../components/Bookshelf.astro";
 import Skills from "../components/Skills.astro";
@@ -137,7 +138,7 @@ const pageTitle = "Home";
 					</a>
 				</div>
 			</div>
-			<img id="hike-image" src="src/assets/hike.jpg" />
+			<img id="hike-image" src={hikeImage} />
 		</div>
 		<Bookshelf books={experienceData.sections.books.items} />
 	</section>
@@ -152,7 +153,7 @@ const pageTitle = "Home";
 				href="/awwab-mahdi-resume.pdf"
 				target="_blank"
 				rel="noopener noreferrer">Resume</a
-			><Link /> here.
+			><OpenInNewTab /> here.
 		</p>
 	</section>
 
