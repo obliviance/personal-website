@@ -17,7 +17,9 @@ Using the Lato font from Google Fonts, falling back to Arial and sans-serif.
 Using inline SVGs of Material Line Icons by Vjacheslav Trushkin at https://icon-sets.iconify.design/
 - LinkedIn Icon
 - GitHub Icon
+- Link Icon
 
 Using inline SVGs of Material Design Icons by Google at https://fonts.google.com/icons
 - Light Mode Icon
 - Dark Mode Icon
+- Open In New Icon
