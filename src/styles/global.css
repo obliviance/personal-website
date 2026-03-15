@@ -11,9 +11,9 @@
   --global-transition: all var(--global-transition-duration) ease-in-out;
 
   /* Default Theme Variables */
-  --color-light: #E4F9F5;
-  --color-dark: #40514E;
-  --color-accent: #30E3CA;
+  --color-light: #EEEEEE;
+  --color-dark: #222831;
+  --color-accent: #00BFD3;
   --color-tone: color-mix(in srgb, var(--color-accent) 75%, gray);
 }
 
@@ -29,25 +29,18 @@
 }
 
 /* Custom Theme Variables */
-[data-theme='logo'] {
-  --color-light: rgb(234, 254, 255);
-  --color-dark: rgb(1, 20, 21);
-  --color-accent: rgb(0, 191, 211);
-  --color-tone: rgb(18, 118, 128);
-}
-
-[data-theme='popular'] {
+[data-theme='main'] {
   --color-light: #EEEEEE;
   --color-dark: #222831;
-  --color-accent: #00ADB5;
+  --color-accent: #00BFD3;
   --color-tone: #393E46;
 }
 
-[data-theme='light-blue'] {
-  --color-light: #E3FDFD;
-  --color-dark: #71C9CE;
-  --color-accent: #A6E3E9;
-  --color-tone: #CBF1F5;
+[data-theme='logo'] {
+  --color-light: #6CF5FF;
+  --color-dark: #065C63;
+  --color-accent: #00BFD3;
+  --color-tone: #0B9EAD;
 }
 
 [data-theme='sandy'] {
