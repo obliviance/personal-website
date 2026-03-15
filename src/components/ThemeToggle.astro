@@ -4,10 +4,10 @@ import DarkMode from "./icons/DarkMode.astro"
 ---
 <button id="theme-toggle" title="Toggles light & dark theme">
   <span class="sun">
-    <LightMode />
+    <LightMode fill="var(--color-text)" />
   </span>
   <span class="moon">
-    <DarkMode />
+    <DarkMode fill="var(--color-text)" />
   </span>
 </button>
 
@@ -26,7 +26,6 @@ import DarkMode from "./icons/DarkMode.astro"
   }
 
   #theme-toggle svg {
-    fill: var(--color-text);
     width: 2rem;
     height: 2rem;
   }
