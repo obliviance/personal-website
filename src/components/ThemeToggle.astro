@@ -34,13 +34,13 @@ import DarkMode from "./icons/DarkMode.astro"
     transform: scale(1.2);
   }
 
-  /* Hide moon in light mode */
-  :global([data-theme='light']) .moon {
+  /* Hide moon in dark mode */
+  :global([data-theme='dark']) .moon {
     display: none;
   }
 
-  /* Hide sun in dark mode */
-  :global([data-theme='dark']) .sun {
+  /* Hide sun in light mode */
+  :global([data-theme='light']) .sun {
     display: none;
   }
 </style>
