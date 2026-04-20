@@ -5,7 +5,7 @@
 :root {
   scroll-behavior: smooth;
   --global-radius: 2rem;
-  --global-border: 2px solid var(--color-accent);
+  --global-border: none/*2px solid var(--color-accent);*/;
   --global-scale: 1.2;
   --global-transition-duration: 0.15s;
   --global-transition: all var(--global-transition-duration) ease-in-out;
