@@ -1,4 +1,6 @@
 ---
+import SkillList from './SkillList.astro';
+
 interface EducationItem {
     id: string;
     hidden: boolean;
@@ -15,6 +17,7 @@ interface EducationItem {
         url: string;
         label: string;
     };
+    skills: string[];
     description: string;
 }
 
@@ -42,6 +45,11 @@ const { education } = Astro.props;
         display: flex;
         justify-content: space-between;
     }
+    .education-description {
+        margin: 0.5rem 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 </style>
 
 <div class="education-container">
@@ -52,5 +60,11 @@ const { education } = Astro.props;
     <div class="education-details">
         <span class="degree">{education.degree}</span>
         <span class="area">{education.area}</span>
+    </div>
+    <div class="education-skills">
+        <SkillList name='' keywords={education.skills} />
+    </div>
+    <div class="education-description">
+        <Fragment set:html={education.description} />
     </div>
 </div>

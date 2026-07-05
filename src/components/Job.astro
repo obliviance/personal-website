@@ -1,13 +1,16 @@
 ---
+import SkillList from './SkillList.astro';
+
 interface Props {
   company: string;
   position: string;
   location: string;
   period: string;
+  skills: string[];
   description: string;
 }
 
-const { company, position, location, period, description } = Astro.props;
+const { company, position, location, period, skills, description } = Astro.props;
 
 ---
 
@@ -27,6 +30,10 @@ const { company, position, location, period, description } = Astro.props;
     margin-bottom: 0.5rem;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  .job-position {
+    font-weight: 700;
   }
 
   .job-title {
@@ -54,10 +61,6 @@ const { company, position, location, period, description } = Astro.props;
     gap: 0.5rem;
     font-size: 0.9rem;
     color: var(--color-tone);
-  }
-
-  .job-location {
-    font-style: italic;
   }
 
   .job-period {
@@ -91,6 +94,9 @@ const { company, position, location, period, description } = Astro.props;
   <div class="job-details">
     <span class="job-company">{company}</span>
     <span class="job-location">{location}</span>
+  </div>
+  <div class="job-skills">
+    <SkillList name='' keywords={skills} />
   </div>
   <div class="job-description">
     <Fragment set:html={description} />

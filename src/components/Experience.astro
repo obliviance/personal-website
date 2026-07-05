@@ -12,6 +12,7 @@ interface ExperienceItem {
     url: string;
     label: string;
   };
+  skills: string[];
   description: string;
 }
 
@@ -49,6 +50,11 @@ const visibleExperiences = experiences
   .experience-item {
     display: contents;
   }
+
+  .experience-list > li:first-child :global(.job) {
+    /*border: 2px solid var(--color-accent);*/
+    box-shadow: 0 0 10px var(--color-accent);
+  }
 </style>
 
 <div class="experience-container">
@@ -61,6 +67,7 @@ const visibleExperiences = experiences
             position={experience.position}
             location={experience.location}
             period={experience.period}
+            skills={experience.skills}
             description={experience.description}
           />
         </li>
