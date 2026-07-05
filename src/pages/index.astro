@@ -8,9 +8,9 @@ import OpenInNewTab from "../components/icons/OpenInNewTab.astro";
 import hikeImage from "../assets/hike.jpg?url";
 
 import Bookshelf from "../components/Bookshelf.astro";
-import Skills from "../components/Skills.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
+import Volunteer from "../components/Volunteer.astro";
 import Projects from "../components/Projects.astro";
 import Posts from "../components/Posts.astro";
 
@@ -45,7 +45,22 @@ const pageTitle = "Home";
 			border-radius: var(--global-radius);
 			transform: rotate(3deg);
 		}
-		#contact {
+		.section-divider {
+			width: 2px;
+			height: 3rem;
+			margin: 2rem auto;
+			background: var(--color-accent);
+			opacity: 0.7;
+			border-radius: var(--global-radius);
+		}
+		.sub-section {
+			width: min(72%, 40rem);
+			margin-left: auto;
+		}
+		.sub-section :global(.volunteer-container) {
+			padding: 1.5rem;
+		}
+		#contact-border{
 			border: 2px solid var(--color-accent);
 			padding: 5% 10% 10% 10%;
 			width: fit-content;
@@ -117,8 +132,7 @@ const pageTitle = "Home";
 					bread, or exploring new technologies.
 				</p>
 				<p>
-					Feel free to check out my bookshelf, explore my projects, or
-					get in touch with me through my contact information. Thanks
+					Feel free to explore my projects, get in touch with me through my contact information, or check out my bookshelf. Thanks
 					for visiting!
 				</p>
 				<div id="icon-container">
@@ -140,14 +154,16 @@ const pageTitle = "Home";
 			</div>
 			<img id="hike-image" src={hikeImage} />
 		</div>
-		<Bookshelf books={experienceData.sections.books.items} />
 	</section>
 
 	<section id="experience">
 		<h1>Experience</h1>
-		<Skills skills={experienceData.sections.skills.items} />
 		<Experience experiences={experienceData.sections.experience.items} />
+		<div class="section-divider" aria-hidden="true"></div>
 		<Education education={experienceData.sections.education.items[0]} />
+		<div class="sub-section">
+			<Volunteer volunteer={experienceData.sections.volunteer.items[0]} />
+		</div>
 		<p>
 			You can also view my full <a
 				href="/awwab-mahdi-resume.pdf"
@@ -160,26 +176,32 @@ const pageTitle = "Home";
 	<section id="portfolio">
 		<h1>Portfolio</h1>
 		<Projects projects={experienceData.sections.projects.items} />
-		<Posts />
+		<Posts /> 
 	</section>
 
 	<section id="contact">
-		<h1 style="text-align: center;">Contact</h1>
-		<p style="text-align: center;">Get in touch.</p>
-		<div
-			style="align-items: center; display: flex; gap: 2rem; justify-content: center;"
-		>
-			<a href="mailto:awwab.mahdi@gmail.com">Email</a>
-			<a
-				href="http://www.linkedin.com/in/AwwabM"
-				target="_blank"
-				rel="noopener noreferrer">LinkedIn</a
+		<div id="contact-border">
+			<h1 style="text-align: center;">Contact</h1>
+			<p style="text-align: center;">Get in touch.</p>
+			<div
+				style="align-items: center; display: flex; gap: 2rem; justify-content: center;"
 			>
-			<a
-				href="http://github.com/obliviance"
-				target="_blank"
-				rel="noopener noreferrer">GitHub</a
-			>
+				<a href="mailto:awwab.mahdi@gmail.com">Email</a>
+				<a
+					href="http://www.linkedin.com/in/AwwabM"
+					target="_blank"
+					rel="noopener noreferrer">LinkedIn</a
+				>
+				<a
+					href="http://github.com/obliviance"
+					target="_blank"
+					rel="noopener noreferrer">GitHub</a
+				>
+			</div>
 		</div>
 	</section>
+
+	<Bookshelf books={experienceData.sections.books.items} />
+
+
 </BaseLayout>
