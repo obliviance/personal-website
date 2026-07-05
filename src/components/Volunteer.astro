@@ -1,0 +1,92 @@
+---
+import SkillList from "./SkillList.astro";
+
+interface VolunteerItem {
+  id: string;
+  hidden: boolean;
+  organization: string;
+  position: string;
+  location: string;
+  period: string;
+  website: {
+    url: string;
+    label: string;
+  };
+  skills: string[];
+  description: string;
+}
+
+interface Props {
+  volunteer: VolunteerItem;
+}
+
+const { volunteer } = Astro.props;
+---
+
+<style>
+  .volunteer-container {
+    margin: 2rem 0;
+    padding: 2rem;
+    border: var(--global-border);
+    border-radius: var(--global-radius);
+    background-color: color-mix(in srgb, var(--color-accent), transparent 85%);
+  }
+
+  .volunteer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .volunteer-position {
+    font-weight: 700;
+  }
+
+  .volunteer-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-tone);
+  }
+
+  .volunteer-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .volunteer-description :global(ul) {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .volunteer-description :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .volunteer-description :global(p) {
+    margin: 0.25rem 0;
+  }
+</style>
+
+<div class="volunteer-container">
+  <div class="volunteer-header">
+    <span class="volunteer-position">{volunteer.position}</span>
+    <span class="volunteer-period">{volunteer.period}</span>
+  </div>
+
+  <div class="volunteer-details">
+    <span class="volunteer-organization">{volunteer.organization}</span>
+    <span class="volunteer-location">{volunteer.location}</span>
+  </div>
+
+  <div class="volunteer-description">
+    <Fragment set:html={volunteer.description} />
+  </div>
+</div>
