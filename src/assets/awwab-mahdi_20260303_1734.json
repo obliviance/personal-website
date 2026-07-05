@@ -88,6 +88,25 @@
           "id": "pgjjobkpx7s82zb3ts9682f0",
           "hidden": false,
           "company": "Department of National Defence Canada",
+          "position": "Software Developer",
+          "location": "285 Coventry Rd., Ottawa, ON",
+          "period": "March 2026 - Present",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "skills": [
+            "Python",
+            "Azure DevOps",
+            "LaTeX",
+            "Figma"
+          ],
+          "description": "<ul><li><p>Built and configured a document augmentation pipeline using the Augraphy library for various document formats(DOCX, PDF, EML) and with OCR compatibility </p></li><li><p>Modeled, designed, and iterated on more than 20 high-fidelity dashboard wireframes and UI screens in Figma for the ShadowMaker application, including user workflows, logs views, and data visualization graphs</p></li><li><p>Wrote a technical research report for DRDC based on documentation for the ShadowMaker redaction tool, with detailed information on model capabilities, inference handling and diagrams</p></li></ul>"
+        },
+        {
+          "id": "pgjjobkpx7s82zb3ts9682f0",
+          "hidden": false,
+          "company": "Department of National Defence Canada",
           "position": "Data Science Developer",
           "location": "285 Coventry Rd., Ottawa, ON",
           "period": "January 2025 - August 2025",
@@ -95,6 +114,16 @@
             "url": "",
             "label": ""
           },
+          "skills": [
+            "Python",
+            "Azure",
+            "AWS SageMaker",
+            "TensorFlow",
+            "PyTorch",
+            "Nvidia Triton Server",
+            "GitLab CI/CD",
+            "Docker"
+          ],
           "description": "<ul><li><p>Implemented, trained, and tested an optimized 40M parameter document segmentation model(DocStructNet), with 97% accuracy on the DocLayNet and PubLayNet datasets</p></li><li><p>Used the AWS fmeval library, along with ECS, EC2, S3 and SageMaker to deploy a government chatbot with an evaluation pipeline</p></li><li><p>Reworked a Transport Canada Protected B application to replace AzureBlobService with a local version, and produced an exhaustive report on its functionality and security</p></li><li><p>Completed tickets in an Azure DevOps environment, interfacing with Azure GPU VMs, Azure Container Registry, and Azure SQL Database</p></li></ul>"
         },
         {
@@ -108,6 +137,11 @@
             "url": "",
             "label": ""
           },
+          "skills": [
+            "Python",
+            "Bash",
+            "SQL"
+          ],
           "description": "<ul><li><p>Maintained the IT requests inbox for the Human Capital Pay Administration Branch with &gt;1000 employees</p></li><li><p>Created a Bash script that was used to a collate and process network data from all 200+ employees in branch</p></li><li><p>Acted as a Local Registration Authority for myKEY creations and recoveries, and met with clients daily to grant access and troubleshoot problems</p></li></ul>"
         },
         {
@@ -121,6 +155,12 @@
             "url": "",
             "label": ""
           },
+          "skills": [
+            "Python",
+            "HuggingFace",
+            "Ollama",
+            "Excel"
+          ],
           "description": "<ul><li><p>Finetuned an open source LLM from the Hugging Face model library that enabled GPU costs to be reduced by 90%</p></li><li><p>Cleaned CIS Controls data from SCF, SOC II, CMMC and other cybersecurity frameworks</p></li><li><p>Used LangChain and HuggingFace embeddings to build a file-based chatbot that was able to effectively interact with clients and respond to queries</p></li></ul>"
         },
         {
@@ -134,6 +174,12 @@
             "url": "",
             "label": ""
           },
+          "skills": [
+            "React Native",
+            "Figma",
+            "REST API",
+            "JavaScript"
+          ],
           "description": "<ul><li><p>Studied Figma best practices and built several mock-ups to present to the client</p></li><li><p>Translated Figma components into functional React Native components</p></li><li><p>Used a provided REST API to integrate live data into the app</p></li></ul>"
         },
         {
@@ -147,6 +193,11 @@
             "url": "",
             "label": ""
           },
+          "skills": [
+            "Python",
+            "Bash",
+            "SQL"
+          ],
           "description": "<ul><li><p>Developed scripts for loading and processing map data from Google Earth Engine</p></li><li><p>Created a python Flask server for processing and serving height and texture maps at runtime</p></li><li><p>Created a Unity application for displaying a 3D generated world, with multiple perspective controls</p></li></ul>"
         }
       ]
@@ -164,7 +215,7 @@
           },
           "school": "Carleton University",
           "degree": "Cybersecurity Stream",
-          "area": "Bachelors of Computer Science",
+          "area": "Honours Bachelors of Computer Science",
           "grade": "",
           "location": "",
           "period": "September 2021 - February 2026",
@@ -172,7 +223,16 @@
             "url": "",
             "label": ""
           },
-          "description": "Co-President of the Carleton Artificial Intelligence Society(CAIS), running 6 events and managing the development of the website, carletonai.com"
+          "skills": [
+            "Java",
+            "C",
+            "C++",
+            "SQL",
+            "Haskell",
+            "Wireshark",
+            "Linux"
+          ],
+          "description": "Machine Learning · Reinforcement Learning · Multiagent Systems · Big Data Management · Algorithms · OS · Computer Security · Applied Cryptography · Networking · Real-Time Concurrent Systems"
         }
       ]
     },
@@ -211,6 +271,23 @@
             "Python",
             "OpenRouter",
             "Agents"
+          ]
+        },
+        {
+          "id": "qj8l7h9y1s5n2v4c0w3e6zbr",
+          "hidden": false,
+          "name": "Academic Projects",
+          "period": "September 2017 - December 2025",
+          "website": {
+            "url": "https://github.com/obliviance?tab=repositories",
+            "label": ""
+          },
+          "description": "<ul><li><p>Various projects built over my university degree. Main projects are: Art-Gallery-Social-Platform, 3004TermProject, Rl-reversi, SYSC3303_W24-G2, and MARL-comms. </p></li></ul>",
+          "tags": [
+            "JavaScript",
+            "C++",
+            "Java",
+            "Python"
           ]
         }
       ]
@@ -312,9 +389,8 @@
             "Agile",
             "Azure DevOps",
             "CI/CD",
-            "Cloud Providers(Azure",
-            "AWS",
-            "GCP)"
+            "Azure",
+            "AWS"
           ]
         }
       ]
@@ -368,14 +444,14 @@
     "publications": {
       "title": "Publications",
       "columns": 1,
-      "hidden": false,
+      "hidden": true,
       "items": [
         {
           "id": "o252iqu237vdu96olpajz9u2",
-          "hidden": false,
+          "hidden": true,
           "title": "DocStructNet: A Foundational Model for Semantic Segmentation of Complex Document Layouts",
-          "publisher": "Preprint (ICPRAM 2026)",
-          "date": "September 2025",
+          "publisher": "Manuscript",
+          "date": "June 2025",
           "website": {
             "url": "",
             "label": ""
@@ -388,7 +464,26 @@
       "title": "Volunteering",
       "columns": 1,
       "hidden": false,
-      "items": []
+      "items": [
+        {
+          "id": "ahkwffwlpwuk2fguvfft8eal",
+          "hidden": false,
+          "organization": "Carleton AI Society",
+          "position": "Co-President",
+          "location": "Carleton University, Ottawa, Canada",
+          "period": "September 2024 - October 2025",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "skills": [
+            "Python",
+            "Bash",
+            "SQL"
+          ],
+          "description": "<ul><li>Restarted the club from zero activity</li><li>Brought on executives, created a new constitution, and created club accounts and resources</li><li>Managed the development of the club website, <a href='https://carletonai.com' target='_blank'>carletonai.com</a></li><li>Ran 6 events over the Winter 2025 semester with 20+ attendees</li></ul>"
+        }
+      ]
     },
     "references": {
       "title": "References",
