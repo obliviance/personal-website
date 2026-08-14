@@ -14,7 +14,7 @@
   --color-light: #EEEEEE;
   --color-dark: #222831;
   --color-accent: #00BFD3;
-  --color-tone: color-mix(in srgb, var(--color-accent) 75%, gray);
+  --color-tone: color-mix(in srgb, var(--color-accent) 75%, rgb(60, 60, 60));
 }
 
 /* Light and Dark Theme Variables */
@@ -121,7 +121,6 @@ a:has(svg):hover {
   }
 
   .content-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-inline: 1.25rem;
   }
 }

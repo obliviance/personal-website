@@ -18,9 +18,10 @@ import Posts from "../components/Posts.astro";
 import experienceData from "../assets/awwab-mahdi_20260303_1734.json";
 
 const pageTitle = "Home";
+const description = "Awwab Mahdi - Software Developer and Researcher based in Ottawa, Canada. Explore my projects, experience, and get in touch!";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} description={description}>
 	<style>
 		section {
 			padding: 10% 0 10% 0;
@@ -152,7 +153,7 @@ const pageTitle = "Home";
 					</a>
 				</div>
 			</div>
-			<img id="hike-image" src={hikeImage} />
+			<img id="hike-image" src={hikeImage} alt="Awwab sitting on a rocky bluff over farmland, looking out over the landscape." />
 		</div>
 	</section>
 
