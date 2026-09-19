@@ -282,7 +282,7 @@
             "url": "https://github.com/obliviance?tab=repositories",
             "label": ""
           },
-          "description": "<ul><li><p>Various projects built over my university degree. Main projects are: Art-Gallery-Social-Platform, 3004TermProject, Rl-reversi, SYSC3303_W24-G2, and MARL-comms. </p></li></ul>",
+          "description": "<ul><li><p>Various projects built over my university degree. Main projects are: Art-Gallery-Social-Platform, Rl-reversi, and MARL-comms. </p></li></ul>",
           "tags": [
             "JavaScript",
             "C++",
